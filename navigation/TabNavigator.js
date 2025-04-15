@@ -1,8 +1,8 @@
 import React from "react"; 
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import AntDesign from '@expo/vector-icons/AntDesign';
-import App from "../pages/PageEnzo";
+import Icon from '@expo/vector-icons/AntDesign';
 
+import HomeScreen from "../pages/HomeAlejandra";
 import HomeLuiz from "../pages/HomeLuiz";
 import HomeBruna from "../pages/HomeBruna";
 
@@ -10,9 +10,19 @@ const Tab = createBottomTabNavigator();
 
 export default function TabNavigator() {
     return (
-        <Tab.Navigator initialRouteName="HomeLuiz">
+        <Tab.Navigator initialRouteName="Home Alejandra">
             <Tab.Screen 
-                name="HomeLuiz" 
+                name="Home Alejandra" 
+                component={HomeScreen} 
+                options={{
+                    tabBarIcon: ({ color, size }) => ( 
+                        <Icon name="home" color={color} size={size} />
+                    ),
+                }}
+            />
+             
+            <Tab.Screen
+                name="Home Luiz" 
                 component={HomeLuiz} 
                 options={{
                     tabBarIcon: ({ color, size }) => (
