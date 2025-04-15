@@ -1,10 +1,10 @@
-import { View, StyleSheet, TouchableOpacity, Text } from "react-native";
+import {StyleSheet, TouchableOpacity, Image} from "react-native";
 
-export default function Cards({estilo, navegar}){
+export default function Cards({onPress}){
     return(
-        <View style={styles.card}>
-            <TouchableOpacity onPress={{navegar}}/>
-        </View>
+        <TouchableOpacity style={styles.card} onPress={onPress}>
+            <Image source={{uri: 'https://placehold.co/50'}} style={styles.imagem}/>
+        </TouchableOpacity>
     )
 }
 
@@ -15,6 +15,11 @@ const styles = StyleSheet.create({
         borderColor: 'black',
         width: 50,
         height: 50,
-        borderRadius:'50%'
+        borderRadius:'50%',
+    },
+    imagem:{
+        borderRadius: '50%',
+        width:'100%',
+        height:'100%'
     }
 })
