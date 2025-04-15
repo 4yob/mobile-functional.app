@@ -2,6 +2,7 @@ import React from "react";
 import { View, StyleSheet } from "react-native";
 import AntDesign from '@expo/vector-icons/AntDesign';
 import CardZani from "../components/CardZani";
+import Post from "../components/PostsZani";
 
 export default function HomeZani(){
     return(
@@ -12,6 +13,10 @@ export default function HomeZani(){
                 <AntDesign name="rightcircleo" size={24} color="white" />
             </View>
             <View style={styles.posts}>
+                <Post imagem={require("../assets/charizard.png")} text={"text"} />
+                <Post imagem={null} text={"text"} />
+                <Post imagem={null} text={"text"} />
+                <Post imagem={require("../assets/charizard.png")} text={"text"} />
             </View>
         </View>
     )
