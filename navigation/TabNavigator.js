@@ -1,20 +1,42 @@
 import React from "react"; 
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import AntDesign from '@expo/vector-icons/AntDesign';
-import PageEnzo from "../pages/PageEnzo";
+import Icon from '@expo/vector-icons/AntDesign';
 
+import HomeScreen from "../pages/HomeAlejandra";
+import HomeLuiz from "../pages/HomeLuiz";
+import HomeBruna from "../pages/HomeBruna";
 
 const Tab = createBottomTabNavigator(); 
 
 export default function TabNavigator() {
     return (
-        <Tab.Navigator initialRouteName="PageEnzo">
+        <Tab.Navigator initialRouteName="Home Alejandra">
             <Tab.Screen 
-                name="PageEnzo" 
-                component={PageEnzo} 
+                name="Home Alejandra" 
+                component={HomeScreen} 
                 options={{
-                    tabBarIcon: () => (
-                        <AntDesign name="staro" size={24} color="black" />   // alterar o icon depois 
+                    tabBarIcon: ({ color, size }) => ( 
+                        <Icon name="home" color={color} size={size} />
+                    ),
+                }}
+            />
+             
+            <Tab.Screen
+                name="Home Luiz" 
+                component={HomeLuiz} 
+                options={{
+                    tabBarIcon: ({ color, size }) => (
+                        <AntDesign name="linechart" size={size} color={color} />
+                    ),
+                }}
+            />
+
+            <Tab.Screen 
+                name="Home Bruna" 
+                component={HomeBruna} 
+                options={{
+                    tabBarIcon: ({ color, size }) => ( 
+                        <AntDesign name="user-alt" color={color} size={size} />
                     ),
                 }}
             />
