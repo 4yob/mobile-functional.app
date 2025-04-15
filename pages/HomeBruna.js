@@ -1,22 +1,24 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, ScrollView } from "react-native";
+import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity } from "react-native";
+import BottomBruna from "../components/BottomBruna";
+import BoxBruna from "../components/BoxBruna"
 
 export default function HomeBruna() {
     return (
-        <View style={styles.container}>
-            <View style={styles.header}>
-                <View style={styles.bottom}></View>
-                <View style={styles.right}>
-                    <View style={styles.bottom}></View>
-                    <View style={styles.bottom}></View>
+        <ScrollView>
+            <View style={styles.container}>
+                <View style={styles.header}>
+                    <BottomBruna />
+                    <View style={styles.right}>
+                        <BottomBruna />
+                        <BottomBruna />
+                    </View>
                 </View>
-            </View>
-            <View style={styles.main}>
-                <View style={styles.blocks}>
-                    <View style={styles.box}></View>
-                    <View style={styles.box}></View>
-                </View>
-                <ScrollView>
+                <View style={styles.main}>
+                    <View style={styles.blocks}>
+                        <BoxBruna />
+                        <BoxBruna />
+                    </View>
                     <View style={styles.cards}>
                         <View style={styles.card}>
                             <Image style={styles.imageCard} source={require("../assets/react.png")} />
@@ -30,13 +32,13 @@ export default function HomeBruna() {
                             <Image style={styles.imageCard} source={require("../assets/react.png")} />
                             <Text style={styles.text}>React.js é usado para criar interfaces de utilizador interativas, para páginas web e aplicações móveis.</Text>
                         </View>
-                        
-                        
+
+
                     </View>
-                </ScrollView>
-                    
+
+                </View>
             </View>
-        </View>
+        </ScrollView>
     )
 }
 
@@ -52,7 +54,7 @@ const styles = StyleSheet.create({
         width: "100%",
         height: 100,
         position: 'fixed',
-        top: 65,
+        top: 0,
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
@@ -63,16 +65,11 @@ const styles = StyleSheet.create({
     right: {
         display: 'flex',
         flexDirection: 'row',
-    },
-    bottom: {
-        width: 50,
-        height: 50,
-        backgroundColor: '#000',
-        borderRadius: 100,
+        gap: '1rem',
     },
     main: {
         width: '100%',
-        height: '82.2%',
+        height: '90%',
         position: 'fixed',
         bottom: '0',
     },
@@ -82,12 +79,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-evenly',
         marginBottom: '20px'
-    },
-    box: {
-        width: 170,
-        height: 170,
-        borderWidth: 2,
-        borderRadius: 30,
     },
     cards: {
         display: 'flex',
