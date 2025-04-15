@@ -1,22 +1,20 @@
 import React from "react"; 
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import AntDesign from '@expo/vector-icons/AntDesign';
-import App from "../pages/PageEnzo";
-
-import HomeLuiz from "../pages/HomeLuiz";
+import PageEnzo from "../pages/PageEnzo";
 
 
 const Tab = createBottomTabNavigator(); 
 
 export default function TabNavigator() {
     return (
-        <Tab.Navigator initialRouteName="HomeLuiz">
+        <Tab.Navigator initialRouteName="PageEnzo">
             <Tab.Screen 
-                name="HomeLuiz" 
-                component={HomeLuiz} 
+                name="PageEnzo" 
+                component={PageEnzo} 
                 options={{
-                    tabBarIcon: ({ color, size }) => (
-                        <AntDesign name="linechart" size={size} color={color} />   // alterar o icon depois 
+                    tabBarIcon: () => (
+                        <AntDesign name="staro" size={24} color="black" />   // alterar o icon depois 
                     ),
                 }}
             />
