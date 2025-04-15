@@ -7,6 +7,7 @@ import HomeLuiz from "../pages/HomeLuiz";
 
 const Tab = createBottomTabNavigator(); 
 
+
 export default function TabNavigator() {
     return (
         <Tab.Navigator initialRouteName="HomeLuiz">
@@ -15,10 +16,11 @@ export default function TabNavigator() {
                 component={HomeLuiz} 
                 options={{
                     tabBarIcon: ({ color, size }) => (
-                        <AntDesign name="linechart" size={size} color={color} />   // alterar o icon depois 
+                        <AntDesign name="meho" size={24} color="black" />   // alterar o icon depois 
                     ),
                 }}
             />
+            
         </Tab.Navigator>
     );
 }

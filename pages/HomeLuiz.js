@@ -1,6 +1,7 @@
 import { View, StyleSheet,Text, FlatList, SafeAreaView, Dimensions, Image} from "react-native";
 import Cards from "../components/Cards"
 import CardImage from "../components/CardImage";
+import { useNavigation } from "@react-navigation/native";
 
 export default function HomeLuiz(){
     const data = [
@@ -17,7 +18,7 @@ export default function HomeLuiz(){
     return(
         <View style={styles.main}>
             <View style={styles.header}>
-                <Cards estilo={styles.card}/>
+                <Cards estilo={styles.card} onPress={() => navigation.navigate("ProfileLuiz")}/>
                 <Text>Profile</Text>
             </View>
             <SafeAreaView>
@@ -86,7 +87,12 @@ const styles = StyleSheet.create({
         marginTop:10,
         display:'flex',
         justifyContent:'center',
-        alignItems:'center'
+        alignItems:'center',
+        borderWidth: 1,
+        borderStyle: 'solid',
+        borderColor: 'black',
+        borderRadius:10,
+        marginBottom:10
     }
 })
 
