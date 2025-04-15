@@ -1,6 +1,6 @@
 import React from "react"; 
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Icon from '@expo/vector-icons/AntDesign';
+import AntDesign from '@expo/vector-icons/AntDesign';
 
 import HomeScreen from "../pages/HomeAlejandra";
 import HomeLuiz from "../pages/HomeLuiz";
@@ -11,12 +11,12 @@ const Tab = createBottomTabNavigator();
 export default function TabNavigator() {
     return (
         <Tab.Navigator initialRouteName="Home Alejandra">
-            <Tab.Screen 
+            <Tab.Screen
                 name="Home Alejandra" 
                 component={HomeScreen} 
                 options={{
-                    tabBarIcon: ({ color, size }) => ( 
-                        <Icon name="home" color={color} size={size} />
+                    tabBarIcon: ({ color, size }) => (
+                        <AntDesign name="home" size={size} color={color} />
                     ),
                 }}
             />
