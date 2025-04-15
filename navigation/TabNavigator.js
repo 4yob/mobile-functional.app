@@ -1,6 +1,7 @@
 import React from "react"; 
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import AntDesign from '@expo/vector-icons/AntDesign';
+import App from "../pages/PageEnzo";
 
 
 const Tab = createBottomTabNavigator(); 
