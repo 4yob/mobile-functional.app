@@ -10,6 +10,7 @@ import PageEnzo from "../pages/PageEnzo"
 
 const Tab = createBottomTabNavigator(); 
 
+
 export default function TabNavigator() {
     return (
         <Tab.Navigator initialRouteName="Home Alejandra">
@@ -27,6 +28,10 @@ export default function TabNavigator() {
                 name="Home Luiz" 
                 component={HomeLuiz} 
                 options={{
+
+                    tabBarIcon: ({ color, size }) => (
+                        <AntDesign name="meho" size={24} color="black" />   // alterar o icon depois 
+
                     tabBarIcon: () => (
                         <MaterialCommunityIcons name="face-man-profile" size={24} color="black" />
                     ),
@@ -59,9 +64,11 @@ export default function TabNavigator() {
                 options={{
                     tabBarIcon: () => ( 
                         <MaterialCommunityIcons name="face-man-profile" size={24} color="black" />
+
                     ),
                 }}
             />
+            
         </Tab.Navigator>
     );
 }
