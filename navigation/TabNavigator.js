@@ -17,6 +17,15 @@ export default function TabNavigator() {
                         <Icon name="home" color={color} size={size} /> // alterar o icon depois 
                     ),
                 }}
+            />
+            <Tab.Screen 
+                name="Enzo" 
+                component={App} 
+                options={{
+                    tabBarIcon: ({ color, size }) => ( 
+                        <AntDesign name="staro" size={24} color="black" />
+                    ),
+                }}
             /> 
             <Tab.Screen 
                 name="Detalhes" 
