@@ -9,8 +9,6 @@ export default function HomeScreen({ navigation }) {
                 <TouchableOpacity style={styles.button}></TouchableOpacity>
             </View>
             <View style={styles.scrollsection}>
-                <View style={styles.icon}>
-                </View>
             </View>
             <View style={styles.main}>
                 <View style={styles.block}>
