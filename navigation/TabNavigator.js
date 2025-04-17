@@ -23,15 +23,10 @@ export default function TabNavigator() {
                     ),
                 }}
             />
-             
             <Tab.Screen
                 name="Home Luiz" 
                 component={HomeLuiz} 
                 options={{
-
-                    tabBarIcon: ({ color, size }) => (
-                        <AntDesign name="meho" size={24} color="black" />   // alterar o icon depois 
-
                     tabBarIcon: () => (
                         <MaterialCommunityIcons name="face-man-profile" size={24} color="black" />
                     ),
